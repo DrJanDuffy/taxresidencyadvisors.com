@@ -17,7 +17,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, CALENDLY_URL } from "@/lib/site";
+import { CalendlyBadge } from "@/components/CalendlyBadge";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -106,6 +107,7 @@ const localBusinessJsonLd = {
     "@type": "ContactPoint",
     telephone: "+1-702-222-1964",
     email: "info@taxresidencyadvisors.com",
+    url: CALENDLY_URL,
     contactType: "customer service",
     areaServed: "US",
     availableLanguage: "English",
@@ -122,7 +124,14 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${dmSans.variable}`}
     >
+      <head>
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className="antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)] font-sans">
+        <CalendlyBadge />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ET0Y55X1RC"
           strategy="afterInteractive"

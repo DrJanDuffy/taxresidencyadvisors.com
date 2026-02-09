@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CALENDLY_URL } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -114,9 +115,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-[var(--foreground)] hover:text-[var(--accent)]">
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[var(--foreground)] hover:text-[var(--accent)]"
+                >
                   Schedule a Consultation
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

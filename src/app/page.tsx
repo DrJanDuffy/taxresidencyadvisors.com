@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, CALENDLY_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
 import { StatBar } from "@/components/StatBar";
 import { TestimonialCard } from "@/components/TestimonialCard";
@@ -113,7 +113,7 @@ export default function Home() {
               <p className="mt-3 text-[var(--foreground)]/90">
                 Institutional-grade real estate advisory for multi-state portfolios. Multifamily, new construction pipelines, and P3 partnerships.
               </p>
-              <CTA variant="ghost" href="/contact" className="mt-4">
+              <CTA variant="ghost" href={CALENDLY_URL} className="mt-4" external>
                 Talk Strategy
               </CTA>
             </div>

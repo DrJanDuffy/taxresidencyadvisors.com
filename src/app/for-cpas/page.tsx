@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, CALENDLY_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { ForCPAsReferralForm } from "@/components/ForCPAsReferralForm";
@@ -166,7 +166,7 @@ export default function ForCPAsPage() {
           <h2 className="font-playfair text-2xl font-bold text-[var(--foreground)]">How Our Referral Program Works</h2>
           <ol className="mt-10 space-y-8">
             {[
-              { step: "You Refer", body: "Send us your client's name and timeline. That's it. Call, email, or use the form below. Takes 60 seconds." },
+              { step: "You Refer", body: "Send us your client's name and timeline. That's it. Call, email, schedule a call, or use the form below. Takes 60 seconds." },
               { step: "We Connect", body: "I personally call your client within 24 hours. I introduce myself, learn their needs, and explain the Nevada market — tailored to their situation and your tax strategy." },
               { step: "We Execute", body: "I handle the entire real estate transaction: property search, neighborhood matching, negotiation, inspections, closing. I coordinate with you on any domicile documentation needs." },
               { step: "You Stay Informed", body: "You get status updates at key milestones. Your client stays your client. I never cross the line into tax advice — that's your lane." },
@@ -240,7 +240,11 @@ export default function ForCPAsPage() {
             <li>Any domicile or CPA constraints I should know (e.g. primary residence requirement, filing strategy)</li>
           </ul>
           <p className="mt-4 text-[var(--foreground)]/90">
-            You can send this via the form below, or call/email me directly. I&apos;ll follow up with your client within 24 hours.
+            You can send this via the form below,{" "}
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">
+              schedule a call
+            </a>
+            , or call/email me directly. I&apos;ll follow up with your client within 24 hours.
           </p>
         </div>
       </section>
@@ -250,6 +254,12 @@ export default function ForCPAsPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="font-playfair text-2xl font-bold text-[var(--foreground)]">Refer a Client</h2>
           <p className="mt-2 text-[var(--muted)]">Confidential. I&apos;ll personally follow up within 24 hours.</p>
+          <p className="mt-2 text-sm text-[var(--foreground)]/90">
+            Prefer to talk first?{" "}
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">
+              Schedule a call with Dr. Jan
+            </a>
+          </p>
           <div className="mt-10">
             <ForCPAsReferralForm />
           </div>

@@ -13,6 +13,6 @@ alwaysApply: true
 
 **Voice:** Short sentences (8–15 words), specific data (amounts, neighborhoods, builders), use "I"/"my". No corporate-speak, no vague fluff, no "genuinely"/"honestly."
 
-**Tech/design:** Navy #1B2A4A, gold #C9A84C; Playfair/DM Sans; Framer Motion for sections; mobile-first; CTAs to /for-cpas and /contact.
+**Tech/design:** Navy #1B2A4A, gold #C9A84C; Playfair/DM Sans; Framer Motion for sections; mobile-first; CTAs to /for-cpas and /contact. Primary scheduling CTA = Calendly (https://calendly.com/drjanduffy/appointment); keep phone and form as secondary.
 
 Full spec (page copy, forms, SEO): see `docs/phase2-multipage-spec.md` if present.

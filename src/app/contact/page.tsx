@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, CALENDLY_URL } from "@/lib/site";
 import { ContactPageForm } from "@/components/ContactPageForm";
 
 export const metadata: Metadata = {
@@ -26,6 +26,7 @@ const contactJsonLd = {
     "@type": "ContactPoint",
     telephone: "+1-702-222-1964",
     email: "info@taxresidencyadvisors.com",
+    url: CALENDLY_URL,
     contactType: "customer service",
     areaServed: "US",
     availableLanguage: "English",
@@ -41,14 +42,35 @@ export default function ContactPage() {
         <div className="mx-auto max-w-4xl">
           <h1 className="font-playfair text-4xl font-bold text-[var(--foreground)] sm:text-5xl">Contact</h1>
           <p className="mt-6 text-lg text-[var(--muted)]">
-            Schedule a consultation or refer a client. We&apos;ll respond within 24 hours.
+            Schedule a call with Dr. Jan below, or refer a client and we&apos;ll respond within 24 hours.
           </p>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block rounded bg-[var(--accent)] px-5 py-2.5 font-medium text-[#0F1A2E] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]"
+          >
+            Schedule a call with Dr. Jan
+          </a>
+        </div>
+      </section>
+
+      <section className="border-t border-white/5 px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-playfair text-2xl font-semibold text-[var(--foreground)]">Book a time</h2>
+          <p className="mt-2 text-[var(--muted)]">Choose a slot that works for you. Or send a message or call below.</p>
+          <div
+            className="calendly-inline-widget mt-6"
+            data-url={CALENDLY_URL}
+            style={{ minWidth: 320, height: 700 }}
+          />
         </div>
       </section>
 
       <section className="border-t border-white/5 px-4 py-16 sm:px-6">
         <div className="mx-auto max-w-6xl lg:grid lg:grid-cols-3 lg:gap-12">
           <div className="lg:col-span-2">
+            <h2 className="font-playfair text-xl font-semibold text-[var(--foreground)]">Or send a message</h2>
             <ContactPageForm />
           </div>
           <aside className="mt-12 lg:mt-0">

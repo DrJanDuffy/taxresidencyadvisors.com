@@ -7,6 +7,8 @@ type CTAProps = {
   href: string;
   children: React.ReactNode;
   className?: string;
+  /** When true, opens in new tab with noopener noreferrer (e.g. Calendly). */
+  external?: boolean;
 };
 
 const baseClasses =
@@ -21,8 +23,22 @@ const variantClasses: Record<CTAVariant, string> = {
     "text-[var(--accent)] hover:text-[var(--foreground)] px-0 py-2",
 };
 
-export function CTA({ variant, href, children, className = "" }: CTAProps) {
+export function CTA({ variant, href, children, className = "", external }: CTAProps) {
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`.trim();
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+      >
+        {children}
+        {variant === "ghost" && <span aria-hidden>→</span>}
+      </a>
+    );
+  }
 
   return (
     <Link href={href} className={classes}>

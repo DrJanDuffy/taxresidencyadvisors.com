@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getServiceBySlug, getAllServiceSlugs, type Service } from "@/lib/services";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, CALENDLY_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -82,7 +82,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       <section className="border-t border-white/5 px-4 py-16 sm:px-6">
         <div className="mx-auto flex max-w-3xl flex-wrap gap-4">
-          <CTA variant="primary" href="/contact">
+          <CTA variant="primary" href={CALENDLY_URL} external>
             Schedule a Consultation
           </CTA>
           <CTA variant="secondary" href="/for-cpas">
