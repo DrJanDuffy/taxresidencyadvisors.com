@@ -9,71 +9,49 @@ export function Footer() {
             Contact
           </h4>
           <a
-            href="tel:+626786909"
+            href="mailto:info@taxresidencyadvisors.com"
             className="block text-[var(--foreground)] hover:text-[var(--accent)]"
           >
-            +62 6786909
+            info@taxresidencyadvisors.com
           </a>
           <a
-            href="mailto:contact@b1-consulting.com"
+            href="tel:+17022221964"
             className="block text-[var(--foreground)] hover:text-[var(--accent)]"
           >
-            contact@b1-consulting.com
+            702-222-1964
           </a>
         </div>
         <div>
           <h4 className="text-sm uppercase tracking-widest text-[var(--muted)] mb-4">
-            Address
+            Offices
           </h4>
           <p className="text-[var(--foreground)]">
-            78 Jalan hcosiah azpojpoz
+            Las Vegas, Nevada
             <br />
-            iàdzi, Bali
+            Southern California
           </p>
         </div>
         <div>
           <h4 className="text-sm uppercase tracking-widest text-[var(--muted)] mb-4">
-            Open Hours
+            Hours
           </h4>
           <p className="text-[var(--foreground)]">
-            Monday to friday
+            Monday to Friday
             <br />
-            9am to 6pm
+            9am to 6pm PST
           </p>
         </div>
         <div>
           <h4 className="text-sm uppercase tracking-widest text-[var(--muted)] mb-4">
-            Freelances & Applicants
+            Connect
           </h4>
-          <p className="text-[var(--foreground)] mb-2">
-            Collaborate with us
-          </p>
-          <a
-            href="mailto:hello@b1-consulting.com"
+          <Link
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[var(--foreground)] hover:text-[var(--accent)]"
           >
-            hello@b1-consulting.com
-          </a>
-        </div>
-      </div>
-      <div className="mt-16 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
-        <span className="text-sm text-[var(--muted)]">Connect</span>
-        <div className="flex gap-6">
-          <Link
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--muted)] hover:text-[var(--accent)]"
-          >
-            Fb
-          </Link>
-          <Link
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--muted)] hover:text-[var(--accent)]"
-          >
-            Ig
+            LinkedIn
           </Link>
         </div>
       </div>

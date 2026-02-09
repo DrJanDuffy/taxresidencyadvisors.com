@@ -7,8 +7,8 @@ const NAV_LINKS = [
   { href: "#introduction", label: "Introduction" },
   { href: "#about", label: "About Us" },
   { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#clients", label: "Clients & Partners" },
+  { href: "#case-studies", label: "Case Studies" },
+  { href: "#clients", label: "Trusted By" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -17,8 +17,14 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-[var(--background)]/90 backdrop-blur border-b border-white/5">
-      <Link href="/" className="text-xl font-semibold tracking-tight">
-        B-One Consulting
+      <Link href="/" className="flex items-center gap-2">
+        <img
+          src="/logo-light.svg"
+          alt="KLB Consultants"
+          className="h-8 w-auto"
+          width={200}
+          height={32}
+        />
       </Link>
       <button
         type="button"
@@ -70,9 +76,9 @@ export function Header() {
       </nav>
       <Link
         href="#contact"
-        className="hidden md:inline-flex text-sm font-medium border border-white/20 px-4 py-2 rounded hover:bg-white/5 transition"
+        className="hidden md:inline-flex text-sm font-medium border border-[var(--accent)] px-4 py-2 rounded hover:bg-white/5 transition"
       >
-        SAY HELLO
+        Schedule a Consultation
       </Link>
     </header>
   );

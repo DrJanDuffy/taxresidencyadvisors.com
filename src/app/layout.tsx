@@ -1,10 +1,53 @@
 import type { Metadata } from "next";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "B-One Consulting",
+  title: "KLB Consultants | Tax Residency Advisors",
   description:
-    "360º Services: Audit & Consulting, Digital Solution, Data Solution, Marketing & Branding.",
+    "Expert tax residency planning and real estate investment consulting for family offices. CA-to-NV relocation strategy, multi-state advisory, institutional RE consulting.",
+  keywords:
+    "tax residency planning, Nevada tax residency, California to Nevada relocation, family office real estate, multi-state tax advisory, Las Vegas real estate consulting",
+  openGraph: {
+    title: "KLB Consultants | Tax Residency Advisors",
+    description:
+      "Strategic tax residency planning for high-net-worth families since 2005.",
+    url: "https://taxresidencyadvisors.com",
+    siteName: "KLB Consultants",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "KLB Consultants",
+  description:
+    "Tax residency planning and real estate investment consulting",
+  url: "https://taxresidencyadvisors.com",
+  telephone: "+1-702-222-1964",
+  areaServed: ["California", "Nevada"],
+  foundingDate: "2005-01",
+  serviceType: [
+    "Tax Residency Planning",
+    "Real Estate Investment Consulting",
+    "Family Office Advisory",
+  ],
 };
 
 export default function RootLayout({
@@ -13,8 +56,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <html
+      lang="en"
+      className={`${playfair.variable} ${dmSans.variable}`}
+    >
+      <body className="antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)] font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

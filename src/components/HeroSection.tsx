@@ -4,37 +4,33 @@ export function HeroSection() {
   return (
     <section
       id="introduction"
-      className="min-h-screen flex flex-col justify-center px-6 pt-24 pb-16"
+      className="hero-gradient-mesh min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 relative"
     >
-      <div className="max-w-4xl">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1]">
-          Together
+      <div className="max-w-4xl relative z-10">
+        <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-[var(--foreground)]">
+          Strategic Tax Residency Planning for High-Net-Worth Families
         </h1>
-        <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-[var(--accent)] mt-2">
-          Let&apos;s Reach your goals!
-        </h2>
-        <p className="mt-8 text-lg md:text-xl text-[var(--muted)] max-w-xl">
-          Quanta autem vis amicitiae sit, ex hoc intellegi maxime
+        <p className="mt-6 text-lg md:text-xl text-[var(--muted)] max-w-2xl leading-relaxed">
+          Navigate multi-state tax optimization and real estate investment
+          strategy with institutional-grade advisory since 2005.
         </p>
-        <Link
-          href="#services"
-          className="inline-flex items-center gap-2 mt-12 text-[var(--muted)] hover:text-[var(--foreground)] transition"
-        >
-          <span>Scroll for more</span>
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+        <div className="flex flex-wrap gap-4 mt-10">
+          <Link
+            href="#contact"
+            className="inline-flex items-center justify-center bg-[var(--accent)] text-[var(--background)] font-semibold px-6 py-3 rounded hover:opacity-90 transition"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </Link>
+            Schedule a Consultation
+          </Link>
+          <Link
+            href="#services"
+            className="inline-flex items-center justify-center border border-[var(--accent)] text-[var(--foreground)] font-medium px-6 py-3 rounded hover:bg-white/5 transition"
+          >
+            Our Services
+          </Link>
+        </div>
+        <p className="mt-16 text-sm text-[var(--muted)] uppercase tracking-widest">
+          California | Nevada | Family Offices | Since 2005
+        </p>
       </div>
     </section>
   );

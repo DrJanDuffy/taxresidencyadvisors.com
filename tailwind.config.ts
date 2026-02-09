@@ -9,21 +9,20 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#1B2A4A",
+        secondary: "#C9A84C",
+        accent: "#64748B",
+        backgroundLight: "#F8F7F4",
+        backgroundDark: "#0F1A2E",
+        textLight: "#1E293B",
+        textDark: "#F1F5F9",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        muted: "var(--muted)",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
-      },
-      keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        marquee: "marquee 20s linear infinite",
+        playfair: ["var(--font-playfair)", "serif"],
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
       },
     },
   },

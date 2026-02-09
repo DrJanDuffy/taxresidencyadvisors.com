@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-  --muted: #a1a1aa;
-  --accent: #eab308;
+  --background: #0F1A2E;
+  --foreground: #F1F5F9;
+  --muted: #64748B;
+  --accent: #C9A84C;
+  --primary: #1B2A4A;
+  --backgroundLight: #F8F7F4;
+  --textLight: #1E293B;
 }
 
 body {
@@ -16,4 +19,17 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Hero gradient mesh background */
+.hero-gradient-mesh {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 168, 76, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(27, 42, 74, 0.4), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 50%, rgba(27, 42, 74, 0.3), transparent);
+  animation: gradient-shift 15s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-shift {
+  0% { opacity: 1; }
+  100% { opacity: 0.85; }
 }
