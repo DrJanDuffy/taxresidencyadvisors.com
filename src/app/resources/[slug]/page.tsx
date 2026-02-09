@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_URL } from "@/lib/site";
 import { getResourceBySlug, getAllResourceSlugs } from "@/lib/resources";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -92,6 +93,8 @@ export default async function ResourceArticlePage({ params }: PageProps) {
               <Link href="/contact" className="text-[var(--accent)] hover:underline">
                 Contact Dr. Jan Duffy
               </Link>
+              {" "}
+              or <CalendlyPopupLink className="text-[var(--accent)] hover:underline">schedule a call</CalendlyPopupLink>
             </li>
           </ul>
         </section>

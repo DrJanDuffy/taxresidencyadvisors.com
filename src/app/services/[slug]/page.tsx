@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getServiceBySlug, getAllServiceSlugs, type Service } from "@/lib/services";
-import { SITE_URL, CALENDLY_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -82,9 +83,11 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       <section className="border-t border-white/5 px-4 py-16 sm:px-6">
         <div className="mx-auto flex max-w-3xl flex-wrap gap-4">
-          <CTA variant="primary" href={CALENDLY_URL} external>
+          <CalendlyPopupLink
+            className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded bg-[var(--accent)] px-5 py-2.5 font-medium text-[#0F1A2E] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]"
+          >
             Schedule a Consultation
-          </CTA>
+          </CalendlyPopupLink>
           <CTA variant="secondary" href="/for-cpas">
             Have your CPA refer you
           </CTA>

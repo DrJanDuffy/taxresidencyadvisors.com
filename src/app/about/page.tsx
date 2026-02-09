@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_URL } from "@/lib/site";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 
 export const metadata: Metadata = {
   title: "About Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -78,6 +79,7 @@ export default function AboutPage() {
           <p className="mt-8 font-playfair text-lg text-[var(--accent)]">— Dr. Jan Duffy</p>
           <p className="text-sm text-[var(--muted)]">NV License S.0197614.LLC</p>
           <a href="tel:+17022221964" className="mt-1 block text-sm text-[var(--foreground)] hover:text-[var(--accent)]">702-222-1964</a>
+          <span className="mt-1 block text-sm text-[var(--foreground)]/90">or <CalendlyPopupLink className="text-[var(--accent)] hover:underline">schedule a call</CalendlyPopupLink></span>
         </div>
       </section>
 
@@ -144,9 +146,17 @@ export default function AboutPage() {
 
       <section className="border-t border-white/5 px-4 py-12 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <Link href="/for-cpas" className="inline-flex min-h-[48px] items-center justify-center rounded bg-[var(--accent)] px-6 py-2.5 font-semibold text-[#0F1A2E] hover:opacity-90">
-            Refer a Client →
-          </Link>
+          <p className="text-[var(--muted)]">Ready to talk?</p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+            <CalendlyPopupLink
+              className="inline-flex min-h-[48px] items-center justify-center rounded bg-[var(--accent)] px-6 py-2.5 font-semibold text-[#0F1A2E] hover:opacity-90"
+            >
+              Schedule a call with Dr. Jan
+            </CalendlyPopupLink>
+            <Link href="/for-cpas" className="inline-flex min-h-[48px] items-center justify-center rounded border-2 border-white/30 px-6 py-2.5 font-medium text-[var(--foreground)] hover:bg-white/5">
+              Refer a Client →
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -19,8 +19,8 @@ export function CalendlyBadge() {
             }) => void } }).Calendly.initBadgeWidget({
               url: CALENDLY_URL,
               text: "Schedule Consultation",
-              color: "#0069ff",
-              textColor: "#ffffff",
+              color: "#C9A84C",
+              textColor: "#0F1A2E",
               branding: true,
             });
           }

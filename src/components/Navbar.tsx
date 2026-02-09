@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 
 const MAIN_LINKS = [
   { href: "/", label: "Home" },
@@ -104,7 +105,12 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2 lg:flex">
+          <CalendlyPopupLink
+            className="inline-flex min-h-[48px] items-center justify-center rounded border-2 border-white/30 px-5 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-white/5"
+          >
+            Book a call
+          </CalendlyPopupLink>
           <Link
             href="/for-cpas"
             className="inline-flex min-h-[48px] items-center justify-center rounded bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[#0F1A2E] hover:opacity-90"
@@ -174,6 +180,11 @@ export function Navbar() {
               <Link href="/contact" className="rounded py-3 text-[var(--foreground)]" onClick={() => setMobileOpen(false)}>
                 Contact
               </Link>
+              <CalendlyPopupLink
+                className="rounded py-3 text-[var(--foreground)]"
+              >
+                Schedule a call
+              </CalendlyPopupLink>
               <Link
                 href="/for-cpas"
                 className="mt-4 inline-flex min-h-[48px] items-center justify-center rounded bg-[var(--accent)] px-4 py-3 font-semibold text-[#0F1A2E]"

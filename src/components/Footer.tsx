@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CALENDLY_URL } from "@/lib/site";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 
 export function Footer() {
   return (
@@ -115,14 +115,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[var(--foreground)] hover:text-[var(--accent)]"
-                >
+                <CalendlyPopupLink className="text-sm text-[var(--foreground)] hover:text-[var(--accent)]">
                   Schedule a Consultation
-                </a>
+                </CalendlyPopupLink>
               </li>
             </ul>
           </div>

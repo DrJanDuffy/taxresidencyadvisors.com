@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_URL, CALENDLY_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 import { StatBar } from "@/components/StatBar";
 import { TestimonialCard } from "@/components/TestimonialCard";
 
@@ -113,9 +114,9 @@ export default function Home() {
               <p className="mt-3 text-[var(--foreground)]/90">
                 Institutional-grade real estate advisory for multi-state portfolios. Multifamily, new construction pipelines, and P3 partnerships.
               </p>
-              <CTA variant="ghost" href={CALENDLY_URL} className="mt-4" external>
-                Talk Strategy
-              </CTA>
+              <CalendlyPopupLink className="mt-4 inline-flex min-h-[48px] items-center justify-center gap-2 rounded px-0 py-2 font-medium text-[var(--accent)] hover:text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]">
+                Talk Strategy →
+              </CalendlyPopupLink>
             </div>
           </div>
         </div>

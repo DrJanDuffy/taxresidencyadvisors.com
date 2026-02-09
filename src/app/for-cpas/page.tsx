@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_URL, CALENDLY_URL } from "@/lib/site";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 import { CTA } from "@/components/CTA";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { ForCPAsReferralForm } from "@/components/ForCPAsReferralForm";
@@ -241,9 +242,9 @@ export default function ForCPAsPage() {
           </ul>
           <p className="mt-4 text-[var(--foreground)]/90">
             You can send this via the form below,{" "}
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">
+            <CalendlyPopupLink className="text-[var(--accent)] hover:underline">
               schedule a call
-            </a>
+            </CalendlyPopupLink>
             , or call/email me directly. I&apos;ll follow up with your client within 24 hours.
           </p>
         </div>
@@ -256,9 +257,9 @@ export default function ForCPAsPage() {
           <p className="mt-2 text-[var(--muted)]">Confidential. I&apos;ll personally follow up within 24 hours.</p>
           <p className="mt-2 text-sm text-[var(--foreground)]/90">
             Prefer to talk first?{" "}
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">
+            <CalendlyPopupLink className="text-[var(--accent)] hover:underline">
               Schedule a call with Dr. Jan
-            </a>
+            </CalendlyPopupLink>
           </p>
           <div className="mt-10">
             <ForCPAsReferralForm />
@@ -285,7 +286,7 @@ export default function ForCPAsPage() {
 
       <section className="border-t border-white/5 px-4 py-12 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-[var(--muted)]">Questions? <Link href="/contact" className="text-[var(--accent)] hover:underline">Contact us</Link>.</p>
+          <p className="text-[var(--muted)]">Questions? <Link href="/contact" className="text-[var(--accent)] hover:underline">Contact us</Link> or <CalendlyPopupLink className="text-[var(--accent)] hover:underline">schedule a call</CalendlyPopupLink>.</p>
         </div>
       </section>
     </>

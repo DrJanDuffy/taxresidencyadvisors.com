@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_URL } from "@/lib/site";
+import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
 
 export const metadata: Metadata = {
   title: "The Complete Guide to Relocating from California to Nevada (2026)",
@@ -125,12 +126,12 @@ export default function NevadaGuidePage() {
           <ul className="mt-4 space-y-2">
             <li><Link href="/for-cpas" className="text-[var(--accent)] hover:underline">For CPAs: refer a client to our Nevada real estate expert</Link></li>
             <li><Link href="/services/tax-residency-planning" className="text-[var(--accent)] hover:underline">Tax residency planning</Link></li>
-            <li><Link href="/contact" className="text-[var(--accent)] hover:underline">Contact Dr. Jan Duffy</Link></li>
+            <li><Link href="/contact" className="text-[var(--accent)] hover:underline">Contact Dr. Jan Duffy</Link> or <CalendlyPopupLink className="text-[var(--accent)] hover:underline">schedule a call</CalendlyPopupLink></li>
           </ul>
         </section>
 
         <footer className="border-t border-white/10 pt-12">
-          <p className="text-[var(--foreground)]">Ready to start? <Link href="/contact" className="text-[var(--accent)] hover:underline">Talk to Dr. Jan</Link>.</p>
+          <p className="text-[var(--foreground)]">Ready to start? <Link href="/contact" className="text-[var(--accent)] hover:underline">Talk to Dr. Jan</Link> or <CalendlyPopupLink className="text-[var(--accent)] hover:underline">schedule a call</CalendlyPopupLink>.</p>
           <p className="mt-2 text-[var(--foreground)]">Are you a CPA? <Link href="/for-cpas" className="text-[var(--accent)] hover:underline">Have your CPA contact us</Link>.</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/services/tax-residency-planning" className="text-sm text-[var(--accent)] hover:underline">Tax Residency Planning</Link>
