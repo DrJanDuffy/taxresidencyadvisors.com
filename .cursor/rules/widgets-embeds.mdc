@@ -1,0 +1,17 @@
+---
+description: Third-party widget and embed code (Calendly, RealScout) — script load, inline init, CSP, config
+globs: "**/Calendly*.tsx,**/layout.tsx,next.config.*"
+alwaysApply: false
+---
+
+# Widgets and Embeds
+
+- **Script load:** For embed scripts that power in-page widgets (e.g. Calendly), use `strategy="afterInteractive"` (or earlier). Avoid `lazyOnload` for scripts that must be ready for inline or popup widgets.
+
+- **Inline embeds in Next.js:** Do not rely only on a static div with a data attribute and auto-discovery. The embed script often runs once at app load; with client navigation the target div may not exist yet. Use a client component that, after mount, waits for the provider's script (e.g. `window.Calendly`) and then calls its init API (e.g. `initInlineWidget({ url, parentElement })`) with a ref to the container. Poll for the global if the script loads later.
+
+- **Popup/link widgets:** When opening a scheduler in a popup, if the script is not loaded yet, fallback to `window.open(url, '_blank')` so the user can still book.
+
+- **CSP:** If adding or editing CSP headers, allow the widget's script and frame domains (e.g. Calendly: `https://assets.calendly.com`, `https://calendly.com`; RealScout: see realscout-csp.mdc).
+
+- **Config:** Keep widget URLs (e.g. `CALENDLY_URL`) in `src/lib/site.ts`; reference them from components.
