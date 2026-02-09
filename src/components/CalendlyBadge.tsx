@@ -7,7 +7,7 @@ export function CalendlyBadge() {
   return (
     <Script
         src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         onLoad={() => {
           if (typeof window !== "undefined" && "Calendly" in window) {
             (window as unknown as { Calendly: { initBadgeWidget: (opts: {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL, CALENDLY_URL } from "@/lib/site";
 import { ContactPageForm } from "@/components/ContactPageForm";
 import { CalendlyPopupLink } from "@/components/CalendlyPopupLink";
+import { CalendlyInlineWidget } from "@/components/CalendlyInlineWidget";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -57,11 +58,9 @@ export default function ContactPage() {
         <div className="mx-auto max-w-6xl">
           <h2 className="font-playfair text-2xl font-semibold text-[var(--foreground)]">Book a time</h2>
           <p className="mt-2 text-[var(--muted)]">Choose a slot that works for you. Or send a message or call below.</p>
-          <div
-            className="calendly-inline-widget mt-6"
-            data-url={CALENDLY_URL}
-            style={{ minWidth: 320, height: 700 }}
-          />
+          <div className="mt-6">
+            <CalendlyInlineWidget />
+          </div>
         </div>
       </section>
 

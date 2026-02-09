@@ -6,6 +6,12 @@ declare global {
   interface Window {
     Calendly?: {
       initPopupWidget: (opts: { url: string }) => void;
+      initInlineWidget: (opts: {
+        url: string;
+        parentElement: HTMLElement;
+        prefill?: Record<string, string>;
+        utm?: Record<string, string>;
+      }) => void;
     };
   }
 }
