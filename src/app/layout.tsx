@@ -33,6 +33,20 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "KLB Consultants",
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/api/og`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KLB Consultants | Tax Residency Advisors",
+    description:
+      "Strategic tax residency planning for high-net-worth families since 2005.",
+    images: [`${SITE_URL}/api/og`],
   },
   icons: {
     icon: "/favicon.svg",

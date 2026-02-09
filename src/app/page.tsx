@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: "KLB Consultants | Tax Residency Advisors",
     description: "The Las Vegas real estate expert CPAs trust for Nevada tax-residency relocations.",
     url: SITE_URL,
+    siteName: "KLB Consultants",
   },
 };
 

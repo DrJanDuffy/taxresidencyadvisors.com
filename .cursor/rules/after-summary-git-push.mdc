@@ -1,0 +1,19 @@
+---
+description: After generating a summary of work, run git add, commit, and push
+alwaysApply: true
+---
+
+# After Summary: Git Add, Commit, Push
+
+When you generate a **summary** of work done in the conversation (e.g. a "Summary of what was implemented" or "Summary of changes" at the end of a task):
+
+1. **Immediately after** providing that summary, run:
+   - `git add -A`
+   - `git commit -m "<short descriptive message>"`
+   - `git push`
+
+2. Use a concise commit message that reflects the work summarized (e.g. "Add OG/Twitter metadata and dynamic OG image", "Docs: add Analytics section to README").
+
+3. If the user has asked not to commit, or there are no changes, skip the git steps and say so in the summary.
+
+This keeps the repo in sync with completed work whenever you summarize what was done.
