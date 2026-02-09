@@ -1,0 +1,18 @@
+---
+description: Phase 2 multipage strategy — Dr. Jan avatar, CPA referral focus, voice and SEO
+alwaysApply: true
+---
+
+# Phase 2 Strategy (taxresidencyadvisors.com)
+
+**Avatar:** Dr. Jan Duffy — Nevada RE agent (S.0197614.LLC), Berkshire Hathaway, 30+ years, 500+ families, Ph.D. Market Research. Brand: direct, warm, data-driven; not corporate, not pushy.
+
+**Target persona:** CPAs and tax preparers (referral sources), not end clients. Value prop: "You handle tax strategy; I handle NV real estate so your client gets white-glove service and you stay in the loop."
+
+**Key page:** `/for-cpas` is the primary conversion page; every page should link to it at least once.
+
+**Voice:** Short sentences (8–15 words), specific data (amounts, neighborhoods, builders), use "I"/"my". No corporate-speak, no vague fluff, no "genuinely"/"honestly."
+
+**Tech/design:** Navy #1B2A4A, gold #C9A84C; Playfair/DM Sans; Framer Motion for sections; mobile-first; CTAs to /for-cpas and /contact.
+
+Full spec (page copy, forms, SEO): see [docs/phase2-multipage-spec.md](docs/phase2-multipage-spec.md) if present.
