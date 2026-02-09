@@ -1,0 +1,9 @@
+---
+description: RealScout widgets require both domains in CSP (script-src and connect-src)
+globs: "next.config.*"
+alwaysApply: false
+---
+
+# RealScout CSP
+
+When editing CSP headers: RealScout requires **both** `em.realscout.com` and `www.realscout.com` in `script-src` and `connect-src`.

@@ -1,5 +1,5 @@
 ---
-description: Phase 2 multipage strategy — Dr. Jan avatar, CPA referral focus, voice and SEO
+description: TRA Phase 2 — Dr. Jan avatar, CPA referral focus, voice and SEO (taxresidencyadvisors.com)
 alwaysApply: true
 ---
 
@@ -15,4 +15,4 @@ alwaysApply: true
 
 **Tech/design:** Navy #1B2A4A, gold #C9A84C; Playfair/DM Sans; Framer Motion for sections; mobile-first; CTAs to /for-cpas and /contact.
 
-Full spec (page copy, forms, SEO): see [docs/phase2-multipage-spec.md](docs/phase2-multipage-spec.md) if present.
+Full spec (page copy, forms, SEO): see `docs/phase2-multipage-spec.md` if present.

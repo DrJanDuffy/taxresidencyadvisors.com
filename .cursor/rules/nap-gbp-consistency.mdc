@@ -1,0 +1,10 @@
+---
+description: NAP, Google Business Profile, and LocalBusiness schema consistency on every page
+alwaysApply: true
+---
+
+# NAP & GBP Consistency
+
+- **NAP** (name, address, phone) in visible text and in LocalBusiness JSON-LD must match the Google Business Profile exactly.
+- Every page has or inherits appropriate schema (e.g. LocalBusiness); contact/location pages include hours, map, and Call / Directions / View Google Reviews.
+- Before considering a page done, confirm NAP and schema are present and consistent with GBP.
