@@ -120,8 +120,8 @@ export function Footer() {
           <span className="hidden sm:inline">|</span>
           <span>Equal Housing Opportunity</span>
           <div className="flex gap-4">
-            <Link href="#" className="hover:text-[var(--accent)]">Privacy Policy</Link>
-            <Link href="#" className="hover:text-[var(--accent)]">Terms</Link>
+            <Link href="/privacy" className="hover:text-[var(--accent)]">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[var(--accent)]">Terms</Link>
           </div>
         </div>
       </div>
