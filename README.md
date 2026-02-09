@@ -61,7 +61,7 @@ To verify data: GA4 **Reports > Real-time** while visiting the live site (allow 
 - `src/app/` — App Router: layout (Navbar + Footer), home, about, for-cpas, services, services/[slug], case-studies, nevada-guide, contact, not-found
 - `src/components/` — Navbar, Footer, CTA, StatBar, TestimonialCard, ForCPAsReferralForm, ContactPageForm
 - `src/lib/` — services.ts (service data), case-studies.ts (case study data)
-- `public/` — Logo, favicon, static assets
+- `public/` — Static assets: `logos/` (brand SVGs), `icons/` (favicon), `images/` (hero, UI, OG), `photos/` (team, property)
 
 ## License
 

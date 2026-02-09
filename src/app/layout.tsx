@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/api/og`],
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/icons/favicon.svg",
   },
   robots: {
     index: true,

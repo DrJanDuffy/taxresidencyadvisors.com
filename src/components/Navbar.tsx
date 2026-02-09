@@ -29,7 +29,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/" className="flex shrink-0 items-center" onClick={() => setMobileOpen(false)}>
           <img
-            src="/logo-light.svg"
+            src="/logos/logo-light.svg"
             alt="Tax Residency Advisors"
             className="h-8 w-auto"
             width={200}
