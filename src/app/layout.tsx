@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -77,6 +78,18 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable}`}
     >
       <body className="antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)] font-sans">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ET0Y55X1RC"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ET0Y55X1RC');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
