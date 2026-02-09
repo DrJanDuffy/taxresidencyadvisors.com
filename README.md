@@ -28,9 +28,13 @@ npm run lint
 
 ## Deployment
 
-Deploy to **Vercel** by connecting the repository. No custom `vercel.json` is required for standard deployment.
+Deploy to **Vercel** by connecting the repository. The repo includes a `vercel.json` that defines one cron job.
 
 Optional: configure environment variables in Vercel for future form handling (e.g. CRM or email integration).
+
+## Cron jobs
+
+One Vercel cron runs **daily at 06:00 UTC** and calls `/api/cron/ping-sitemap`. That route pings Google and Bing with the site sitemap URL (`https://www.taxresidencyadvisors.com/sitemap.xml`) so search engines can recrawl the sitemap. No auth is required for the endpoint; you can add an optional `CRON_SECRET` env var and check it in the route if you want to lock down the URL.
 
 ## Google Search Console
 
