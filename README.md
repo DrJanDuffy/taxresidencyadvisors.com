@@ -46,6 +46,16 @@ The site is ready for [Google Search Console](https://search.google.com/search-c
 
 Apex domain `taxresidencyadvisors.com` redirects to `www.taxresidencyadvisors.com` (see `next.config.ts`). Alternatively use DNS or HTML file upload verification in GSC; the meta tag is optional.
 
+## Analytics
+
+Google Analytics 4 (gtag.js) is loaded in the root layout for the web data stream:
+
+- **Stream URL:** `https://www.taxresidencyadvisors.com`
+- **Measurement ID:** `G-ET0Y55X1RC`
+- **Stream ID:** `13582249380` (for reference; e.g. Measurement Protocol or connected site tags)
+
+To verify data: GA4 **Reports > Real-time** while visiting the live site (allow 24–48 hours for the stream overview to update). Tag settings (internal traffic, consent) can be configured in GA4 for this stream.
+
 ## Project structure
 
 - `src/app/` — App Router: layout (Navbar + Footer), home, about, for-cpas, services, services/[slug], case-studies, nevada-guide, contact, not-found
