@@ -69,6 +69,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/resources" className="text-sm text-[var(--foreground)] hover:text-[var(--accent)]">
+                  Resources
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-sm text-[var(--foreground)] hover:text-[var(--accent)]">
                   Contact
                 </Link>

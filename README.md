@@ -28,9 +28,25 @@ npm run lint
 
 ## Deployment
 
-Deploy to **Vercel** by connecting the repository. The repo includes a `vercel.json` that defines one cron job.
+Deploy to **Vercel** by connecting the repository. The repo includes a `vercel.json` that defines one cron job. Deployment is via Vercel with the repo connected to GitHub ("Connected to all projects"). Webhook events (Deployment Created/Succeeded, Domain Certificate, etc.) are managed in the Vercel dashboard at **Webhooks** (e.g. [vercel.com/webhooks/github](https://vercel.com/webhooks/github)) if you ever need to send deploy or domain events to an external service. **Drains** (Logs, Traces, Speed Insights, Analytics) can be forwarded to a third-party or custom endpoint from the Vercel project: **Settings > Observability > Drains** (or **Add Drain**). No drains are required for this site unless you integrate with an external logging/APM provider.
+
+**What gets deployed** — Production uses **www.taxresidencyadvisors.com** (and apex redirect). One **cron** runs daily at 06:00 UTC and calls `/api/cron/ping-sitemap`. **API routes:** `/api/cron/ping-sitemap`, `/api/og`; **static/sitemap:** `/robots.txt`, `/sitemap.xml`. All page routes (/, /about, /case-studies, /contact, /for-cpas, /nevada-guide, /privacy, /services, /services/[slug], /terms) are built as static or ISR. Deployment checks are not configured; you can add them under **Framework Settings > Deployment Checks** in Vercel if needed.
 
 Optional: configure environment variables in Vercel for future form handling (e.g. CRM or email integration).
+
+**Vercel project security and retention** — In the Vercel project: **Settings** (or **Project Settings**). All of the following are configured in the dashboard only:
+
+- **Build Logs and Source Protection** — who can access `/_logs` and `/_src`
+- **Customer Success Code Visibility** — whether Vercel Support can inspect deployment source
+- **Git Fork Protection** — who can deploy from PRs
+- **Secure Backend Access with OIDC** — issuer and claims for cloud auth
+- **Deployment Retention Policy** / **Recently Deleted Deployments**
+- **Directory Listing** — whether to show folder contents when no index exists
+- **Skew Protection** — max age and allowed domains for cross-site fetch
+- **Bulk Redirects** — limit and pricing
+- **Framework Settings** (same project) — **Framework Preset** (Next.js), **Root Directory**, **Ignored Build Step**, **Node.js Version**, **On-Demand Concurrent Builds**, **Build Machine** (Standard/Enhanced/Turbo), **Deployment Checks**, **Rolling Releases**, **Prioritize Production Builds**
+
+**SEO and GEO** — The site uses **LocalBusiness** and **FAQPage** (For CPAs) schema, **Article** with datePublished/dateModified on the [Nevada Guide](/nevada-guide), and **[llms.txt](https://www.taxresidencyadvisors.com/llms.txt)** for AI agents. **robots.txt** allows crawlers (including GPTBot, Claude-Web, PerplexityBot) and references the [sitemap](https://www.taxresidencyadvisors.com/sitemap.xml).
 
 ## Cron jobs
 
@@ -62,9 +78,9 @@ To verify data: GA4 **Reports > Real-time** while visiting the live site (allow 
 
 ## Project structure
 
-- `src/app/` — App Router: layout (Navbar + Footer), home, about, for-cpas, services, services/[slug], case-studies, nevada-guide, contact, not-found
+- `src/app/` — App Router: layout (Navbar + Footer), home, about, for-cpas, services, services/[slug], case-studies, nevada-guide, resources, resources/[slug], contact, not-found
 - `src/components/` — Navbar, Footer, CTA, StatBar, TestimonialCard, ForCPAsReferralForm, ContactPageForm
-- `src/lib/` — services.ts (service data), case-studies.ts (case study data)
+- `src/lib/` — services.ts (service data), case-studies.ts (case study data), resources.ts (resource articles)
 - `public/` — Static assets: `logos/` (brand SVGs), `icons/` (favicon), `images/` (hero, UI, OG), `photos/` (team, property)
 
 ## License

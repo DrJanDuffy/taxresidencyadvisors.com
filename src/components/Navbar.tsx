@@ -10,6 +10,7 @@ const MAIN_LINKS = [
   { href: "/for-cpas", label: "For CPAs & Advisors" },
   { href: "/nevada-guide", label: "Nevada Guide" },
   { href: "/case-studies", label: "Case Studies" },
+  { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact" },
 ];
 

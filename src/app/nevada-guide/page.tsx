@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   },
 };
 
+const NEVADA_GUIDE_UPDATED = "2026-02-09";
+
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -19,6 +21,8 @@ const articleJsonLd = {
   author: { "@type": "Person", name: "Dr. Jan Duffy" },
   description: "Everything your clients need to know about relocating from California to Nevada — domicile, neighborhoods, new construction, and timeline.",
   url: `${SITE_URL}/nevada-guide`,
+  datePublished: "2026-01-01",
+  dateModified: NEVADA_GUIDE_UPDATED,
 };
 
 export default function NevadaGuidePage() {
@@ -34,6 +38,7 @@ export default function NevadaGuidePage() {
           <p className="mt-6 text-lg text-[var(--muted)]">
             Everything your clients need to know — from a real estate expert who&apos;s guided 500+ families through the move.
           </p>
+          <p className="mt-2 text-sm text-[var(--muted)]">Last updated: {NEVADA_GUIDE_UPDATED}</p>
         </header>
 
         <section id="why-nevada" className="mb-16">
@@ -113,6 +118,15 @@ export default function NevadaGuidePage() {
               <dd className="mt-2 text-[var(--foreground)]/90">Even better. I work with CPA-referred clients every day. I'll keep your CPA in the loop and make sure the real estate timeline supports your tax strategy.</dd>
             </div>
           </dl>
+        </section>
+
+        <section className="mb-16" aria-label="Related">
+          <h2 className="font-playfair text-xl font-bold text-[var(--foreground)]">Related</h2>
+          <ul className="mt-4 space-y-2">
+            <li><Link href="/for-cpas" className="text-[var(--accent)] hover:underline">For CPAs: refer a client to our Nevada real estate expert</Link></li>
+            <li><Link href="/services/tax-residency-planning" className="text-[var(--accent)] hover:underline">Tax residency planning</Link></li>
+            <li><Link href="/contact" className="text-[var(--accent)] hover:underline">Contact Dr. Jan Duffy</Link></li>
+          </ul>
         </section>
 
         <footer className="border-t border-white/10 pt-12">

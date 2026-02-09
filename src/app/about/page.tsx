@@ -43,6 +43,21 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Why TRA / Experience */}
+      <section className="border-t border-white/5 px-4 py-12 sm:px-6">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-playfair text-2xl font-bold text-[var(--foreground)]">Why TRA</h2>
+          <ul className="mt-4 list-inside list-disc space-y-2 text-[var(--foreground)]/90">
+            <li><strong>30+ years</strong> in the Las Vegas market — every neighborhood, every builder.</li>
+            <li><strong>500+ families</strong> guided through CA-to-NV relocations and tax-residency moves.</li>
+            <li><strong>$127M+</strong> in career sales; Berkshire Hathaway HomeServices Nevada Properties.</li>
+          </ul>
+          <p className="mt-4 text-[var(--foreground)]/90">
+            CPAs and tax advisors refer clients to our <Link href="/for-cpas" className="text-[var(--accent)] hover:underline">CPA referral program</Link> for white-glove Nevada real estate and domicile support.
+          </p>
+        </div>
+      </section>
+
       {/* Bio */}
       <section className="border-t border-white/5 px-4 py-16 sm:px-6">
         <div className="mx-auto max-w-3xl">

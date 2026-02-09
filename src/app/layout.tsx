@@ -87,6 +87,31 @@ const jsonLd = {
   ],
 };
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Tax Residency Advisors",
+  alternateName: "TRA",
+  description: "Tax residency planning and Las Vegas real estate. Berkshire Hathaway HomeServices Nevada Properties.",
+  url: SITE_URL,
+  telephone: "+1-702-222-1964",
+  email: "info@taxresidencyadvisors.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+  },
+  areaServed: ["Las Vegas", "Henderson", "Summerlin", "California", "Nevada"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-702-222-1964",
+    email: "info@taxresidencyadvisors.com",
+    contactType: "customer service",
+    areaServed: "US",
+    availableLanguage: "English",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -113,6 +138,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <Navbar />
         <main>{children}</main>

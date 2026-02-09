@@ -29,6 +29,61 @@ const forCPAsJsonLd = {
   telephone: "+1-702-222-1964",
 };
 
+const faqPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do I need to be involved in the real estate transaction?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Not at all. Once you refer your client, I handle everything. But I'm happy to coordinate with you on domicile documentation, closing timelines, or anything else that supports the tax strategy.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What markets do you cover?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "All of Las Vegas and Henderson — Summerlin, The Ridges, Red Rock Country Club, Skye Canyon, Centennial Hills, 55+ communities (Sun City, Del Webb, Heritage at Stonebridge), luxury Strip high-rises, and all new construction from Century Communities, KB Home, Lennar, Pulte, and Toll Brothers. If they're moving to Nevada, I've got it covered.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What about selling their California property?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "I partner with top-tier California agents (including our own KLB team with Kelly Lynn Boyle, CA Licensed Broker) to handle the CA disposition. Your client gets coordinated buy/sell service across both states.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "My client needs to close before December 31st. Can you guarantee that?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "I can't guarantee anything in real estate — but I can tell you that I've never missed a year-end deadline on a CPA-referred relocation. I build in backup options, I stay on top of every timeline, and I communicate proactively.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a formal referral agreement?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "I keep it simple. A referral is a referral — you send your client my way, I take excellent care of them. If you'd like something in writing for your records, I'm happy to provide a professional referral acknowledgment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I know my client is being taken care of?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "I'll send you a status update when I first connect with your client, when we identify target properties, when we go under contract, and when we close. If you want more frequent updates, just say the word.",
+      },
+    },
+  ],
+};
+
 const FAQ = [
   {
     q: "Do I need to be involved in the real estate transaction?",
@@ -60,6 +115,7 @@ export default function ForCPAsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(forCPAsJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }} />
 
       {/* Hero */}
       <section className="hero-gradient-mesh px-4 pt-16 pb-20 sm:px-6">
@@ -168,6 +224,24 @@ export default function ForCPAsPage() {
               attribution="— Tax Attorney, Los Angeles"
             />
           </div>
+        </div>
+      </section>
+
+      {/* What I need from you */}
+      <section className="border-t border-white/5 px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-playfair text-2xl font-bold text-[var(--foreground)]">What I need from you</h2>
+          <p className="mt-4 text-[var(--foreground)]/90">
+            To get started, I only need a few details. The rest we handle together.
+          </p>
+          <ul className="mt-6 list-inside list-disc space-y-2 text-[var(--foreground)]/90">
+            <li>Client name and best contact (email or phone)</li>
+            <li>Target timeline (e.g. close by December 31st for tax year)</li>
+            <li>Any domicile or CPA constraints I should know (e.g. primary residence requirement, filing strategy)</li>
+          </ul>
+          <p className="mt-4 text-[var(--foreground)]/90">
+            You can send this via the form below, or call/email me directly. I&apos;ll follow up with your client within 24 hours.
+          </p>
         </div>
       </section>
 
