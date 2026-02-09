@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 import { CASE_STUDIES } from "@/lib/case-studies";
 import { CTA } from "@/components/CTA";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     "How we help high-net-worth families and family offices: California executive relocations, family office portfolio optimization, tech founder residency planning, and multi-generational transitions.",
   openGraph: {
     title: "Case Studies | KLB Consultants",
-    url: "https://taxresidencyadvisors.com/case-studies",
+    url: `${SITE_URL}/case-studies`,
   },
 };
 

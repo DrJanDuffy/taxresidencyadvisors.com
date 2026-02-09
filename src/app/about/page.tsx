@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
     "Meet Dr. Jan Duffy — Ph.D., 30+ years Las Vegas market expertise, $127M+ career sales, 500+ families. The real estate expert CPAs trust for Nevada tax-residency relocations.",
   openGraph: {
     title: "About Dr. Jan Duffy | KLB Consultants",
-    url: "https://taxresidencyadvisors.com/about",
+    url: `${SITE_URL}/about`,
   },
 };
 

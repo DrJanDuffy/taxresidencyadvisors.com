@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
 import { StatBar } from "@/components/StatBar";
 import { TestimonialCard } from "@/components/TestimonialCard";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KLB Consultants | Tax Residency Advisors",
     description: "The Las Vegas real estate expert CPAs trust for Nevada tax-residency relocations.",
-    url: "https://taxresidencyadvisors.com",
+    url: SITE_URL,
   },
 };
 
@@ -45,7 +46,7 @@ const homeJsonLd = {
       "@type": "ProfessionalService",
       name: "KLB Consultants",
       description: "Tax residency planning and real estate investment consulting. Dr. Jan Duffy, Las Vegas real estate expert for CPA-referred relocations.",
-      url: "https://taxresidencyadvisors.com",
+      url: SITE_URL,
       telephone: "+1-702-222-1964",
       areaServed: [{ "@type": "State", name: "California" }, { "@type": "State", name: "Nevada" }],
     },

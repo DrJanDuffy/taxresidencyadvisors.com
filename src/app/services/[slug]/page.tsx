@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getServiceBySlug, getAllServiceSlugs, type Service } from "@/lib/services";
+import { SITE_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: service.shortDescription,
     openGraph: {
       title: `${service.title} | KLB Consultants`,
-      url: `https://taxresidencyadvisors.com/services/${slug}`,
+      url: `${SITE_URL}/services/${slug}`,
     },
   };
 }

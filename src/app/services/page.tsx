@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
     "Tax residency planning, multi-state advisory, family office RE consulting, and CA-to-NV relocation. KLB Consultants and Dr. Jan Duffy serve CPAs, family offices, and relocating families.",
   openGraph: {
     title: "Services | KLB Consultants",
-    url: "https://taxresidencyadvisors.com/services",
+    url: `${SITE_URL}/services`,
   },
 };
 

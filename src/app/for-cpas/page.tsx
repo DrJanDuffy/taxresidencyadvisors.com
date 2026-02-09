@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 import { CTA } from "@/components/CTA";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { ForCPAsReferralForm } from "@/components/ForCPAsReferralForm";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "For CPAs & Tax Advisors | KLB Consultants",
     description: "A real estate partner your clients and your reputation deserve. Refer a client today.",
-    url: "https://taxresidencyadvisors.com/for-cpas",
+    url: `${SITE_URL}/for-cpas`,
   },
 };
 
@@ -20,7 +21,7 @@ const forCPAsJsonLd = {
   "@type": "ProfessionalService",
   name: "KLB Consultants",
   description: "Real estate partner for CPAs and tax professionals referring clients for Nevada tax-residency relocations.",
-  url: "https://taxresidencyadvisors.com/for-cpas",
+  url: `${SITE_URL}/for-cpas`,
   audience: {
     "@type": "Audience",
     name: "CPAs and Tax Professionals",

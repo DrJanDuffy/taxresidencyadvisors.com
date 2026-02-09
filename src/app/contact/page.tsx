@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 import { ContactPageForm } from "@/components/ContactPageForm";
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
     "Schedule a consultation with Dr. Jan Duffy. CPAs and tax professionals: refer a client. Clients relocating to Nevada: request a consultation. 702-222-1964.",
   openGraph: {
     title: "Contact | KLB Consultants",
-    url: "https://taxresidencyadvisors.com/contact",
+    url: `${SITE_URL}/contact`,
   },
 };
 
@@ -16,6 +17,7 @@ const contactJsonLd = {
   "@type": "LocalBusiness",
   name: "KLB Consultants | Dr. Jan Duffy",
   description: "Tax residency planning and Las Vegas real estate. Berkshire Hathaway HomeServices Nevada Properties.",
+  url: SITE_URL,
   telephone: "+1-702-222-1964",
   email: "info@taxresidencyadvisors.com",
   address: { "@type": "PostalAddress", addressLocality: "Las Vegas", addressRegion: "NV" },

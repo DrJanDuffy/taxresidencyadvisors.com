@@ -16,7 +16,10 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+import { SITE_URL } from "@/lib/site";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "KLB Consultants | Tax Residency Advisors",
   description:
     "Expert tax residency planning and real estate investment consulting for family offices. CA-to-NV relocation strategy, multi-state advisory, institutional RE consulting.",
@@ -26,13 +29,24 @@ export const metadata: Metadata = {
     title: "KLB Consultants | Tax Residency Advisors",
     description:
       "Strategic tax residency planning for high-net-worth families since 2005.",
-    url: "https://taxresidencyadvisors.com",
+    url: SITE_URL,
     siteName: "KLB Consultants",
     type: "website",
   },
   icons: {
     icon: "/favicon.svg",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  ...(process.env.GOOGLE_SITE_VERIFICATION && {
+    verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
+  }),
 };
 
 const jsonLd = {
@@ -41,7 +55,7 @@ const jsonLd = {
   name: "KLB Consultants",
   description:
     "Tax residency planning and real estate investment consulting",
-  url: "https://taxresidencyadvisors.com",
+  url: SITE_URL,
   telephone: "+1-702-222-1964",
   areaServed: ["California", "Nevada"],
   foundingDate: "2005-01",

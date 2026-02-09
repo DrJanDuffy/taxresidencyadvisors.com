@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Complete Guide to Relocating from California to Nevada (2026)",
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
     "Everything your clients need to know about moving to Nevada: domicile, neighborhoods, new construction, timeline, and working with a CPA and real estate agent. By Dr. Jan Duffy.",
   openGraph: {
     title: "California to Nevada Relocation Guide (2026) | KLB Consultants",
-    url: "https://taxresidencyadvisors.com/nevada-guide",
+    url: `${SITE_URL}/nevada-guide`,
   },
 };
 
@@ -17,7 +18,7 @@ const articleJsonLd = {
   headline: "The Complete Guide to Relocating from California to Nevada (2026)",
   author: { "@type": "Person", name: "Dr. Jan Duffy" },
   description: "Everything your clients need to know about relocating from California to Nevada — domicile, neighborhoods, new construction, and timeline.",
-  url: "https://taxresidencyadvisors.com/nevada-guide",
+  url: `${SITE_URL}/nevada-guide`,
 };
 
 export default function NevadaGuidePage() {
