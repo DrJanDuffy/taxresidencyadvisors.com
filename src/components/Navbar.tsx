@@ -30,7 +30,7 @@ export function Navbar() {
         <Link href="/" className="flex shrink-0 items-center" onClick={() => setMobileOpen(false)}>
           <img
             src="/logo-light.svg"
-            alt="KLB Consultants"
+            alt="Tax Residency Advisors"
             className="h-8 w-auto"
             width={200}
             height={32}

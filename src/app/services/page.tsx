@@ -6,9 +6,9 @@ import { SERVICES } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Services | Tax Residency & Real Estate Consulting",
   description:
-    "Tax residency planning, multi-state advisory, family office RE consulting, and CA-to-NV relocation. KLB Consultants and Dr. Jan Duffy serve CPAs, family offices, and relocating families.",
+    "Tax residency planning, multi-state advisory, family office RE consulting, and CA-to-NV relocation. Tax Residency Advisors and Dr. Jan Duffy serve CPAs, family offices, and relocating families.",
   openGraph: {
-    title: "Services | KLB Consultants",
+    title: "Services | Tax Residency Advisors",
     url: `${SITE_URL}/services`,
   },
 };

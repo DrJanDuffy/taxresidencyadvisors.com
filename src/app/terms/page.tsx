@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | KLB Consultants",
+  title: "Terms of Use",
   description: "Terms of use for taxresidencyadvisors.com.",
 };
 

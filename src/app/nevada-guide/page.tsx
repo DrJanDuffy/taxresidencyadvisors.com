@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Everything your clients need to know about moving to Nevada: domicile, neighborhoods, new construction, timeline, and working with a CPA and real estate agent. By Dr. Jan Duffy.",
   openGraph: {
-    title: "California to Nevada Relocation Guide (2026) | KLB Consultants",
+    title: "California to Nevada Relocation Guide (2026) | Tax Residency Advisors",
     url: `${SITE_URL}/nevada-guide`,
   },
 };

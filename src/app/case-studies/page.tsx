@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "How we help high-net-worth families and family offices: California executive relocations, family office portfolio optimization, tech founder residency planning, and multi-generational transitions.",
   openGraph: {
-    title: "Case Studies | KLB Consultants",
+    title: "Case Studies | Tax Residency Advisors",
     url: `${SITE_URL}/case-studies`,
   },
 };

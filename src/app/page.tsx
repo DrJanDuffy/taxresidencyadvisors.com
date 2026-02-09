@@ -6,14 +6,14 @@ import { StatBar } from "@/components/StatBar";
 import { TestimonialCard } from "@/components/TestimonialCard";
 
 export const metadata: Metadata = {
-  title: "KLB Consultants | Tax Residency Advisors | Dr. Jan Duffy",
+  title: "Dr. Jan Duffy",
   description:
     "Your client decided to move to Nevada. Dr. Jan Duffy is the Las Vegas real estate expert CPAs and tax advisors trust. 30+ years, 500+ families. Refer a client or start your relocation.",
   openGraph: {
-    title: "KLB Consultants | Tax Residency Advisors",
+    title: "Tax Residency Advisors",
     description: "The Las Vegas real estate expert CPAs trust for Nevada tax-residency relocations.",
     url: SITE_URL,
-    siteName: "KLB Consultants",
+    siteName: "Tax Residency Advisors",
   },
 };
 
@@ -45,7 +45,7 @@ const homeJsonLd = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      name: "KLB Consultants",
+      name: "Tax Residency Advisors",
       description: "Tax residency planning and real estate investment consulting. Dr. Jan Duffy, Las Vegas real estate expert for CPA-referred relocations.",
       url: SITE_URL,
       telephone: "+1-702-222-1964",
@@ -121,6 +121,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust bar */}
+      <section className="border-t border-white/5 px-4 py-4 sm:px-6">
+        <p className="mx-auto max-w-4xl text-center text-sm uppercase tracking-widest text-[var(--muted)]">
+          Tax Residency Advisors — California &amp; Nevada Real Estate Strategy Since 2005
+        </p>
+      </section>
       <StatBar stats={HOME_STATS} />
 
       {/* Featured Services */}

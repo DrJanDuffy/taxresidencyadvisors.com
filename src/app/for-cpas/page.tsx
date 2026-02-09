@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "When your client establishes Nevada residency, you need a real estate expert who understands tax timelines and domicile documentation. Refer your client to Dr. Jan Duffy — 30+ years, 500+ families.",
   openGraph: {
-    title: "For CPAs & Tax Advisors | KLB Consultants",
+    title: "For CPAs & Tax Advisors | Tax Residency Advisors",
     description: "A real estate partner your clients and your reputation deserve. Refer a client today.",
     url: `${SITE_URL}/for-cpas`,
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const forCPAsJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "KLB Consultants",
+  name: "Tax Residency Advisors",
   description: "Real estate partner for CPAs and tax professionals referring clients for Nevada tax-residency relocations.",
   url: `${SITE_URL}/for-cpas`,
   audience: {

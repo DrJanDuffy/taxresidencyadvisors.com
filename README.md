@@ -1,6 +1,6 @@
 # taxresidencyadvisors.com
 
-Professional website for **KLB Consultants** — tax residency planning and real estate investment consulting for family offices and high-net-worth individuals across California and Nevada.
+Professional website for **Tax Residency Advisors** — tax residency planning and real estate investment consulting for family offices and high-net-worth individuals across California and Nevada.
 
 ## Tech stack
 

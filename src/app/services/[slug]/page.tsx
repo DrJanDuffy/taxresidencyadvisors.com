@@ -14,12 +14,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
-  if (!service) return { title: "Service | KLB Consultants" };
+  if (!service) return { title: "Service" };
   return {
-    title: `${service.title} | KLB Consultants`,
+    title: service.title,
     description: service.shortDescription,
     openGraph: {
-      title: `${service.title} | KLB Consultants`,
+      title: `${service.title} | Tax Residency Advisors`,
       url: `${SITE_URL}/services/${slug}`,
     },
   };
@@ -35,7 +35,7 @@ export default async function ServiceDetailPage({ params }: Props) {
     "@type": "Service",
     name: service.title,
     description: service.shortDescription,
-    provider: { "@type": "Organization", name: "KLB Consultants" },
+    provider: { "@type": "Organization", name: "Tax Residency Advisors" },
   };
 
   return (

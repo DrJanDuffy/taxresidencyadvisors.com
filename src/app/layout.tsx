@@ -21,17 +21,20 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "KLB Consultants | Tax Residency Advisors",
+  title: {
+    default: "Tax Residency Advisors | CA-to-NV Real Estate & Tax Residency Planning",
+    template: "%s | Tax Residency Advisors",
+  },
   description:
-    "Expert tax residency planning and real estate investment consulting for family offices. CA-to-NV relocation strategy, multi-state advisory, institutional RE consulting.",
+    "Expert tax residency real estate services for high-net-worth families relocating from California to Nevada. CPA referral program, domicile strategy, and luxury home placement by Dr. Jan Duffy.",
   keywords:
     "tax residency planning, Nevada tax residency, California to Nevada relocation, family office real estate, multi-state tax advisory, Las Vegas real estate consulting",
   openGraph: {
-    title: "KLB Consultants | Tax Residency Advisors",
+    title: "Tax Residency Advisors",
     description:
-      "Strategic tax residency planning for high-net-worth families since 2005.",
+      "CA-to-NV real estate and tax residency planning. Trusted by CPAs since 2005.",
     url: SITE_URL,
-    siteName: "KLB Consultants",
+    siteName: "Tax Residency Advisors",
     type: "website",
     images: [
       {
@@ -43,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KLB Consultants | Tax Residency Advisors",
+    title: "Tax Residency Advisors",
     description:
-      "Strategic tax residency planning for high-net-worth families since 2005.",
+      "CA-to-NV real estate and tax residency planning. Trusted by CPAs since 2005.",
     images: [`${SITE_URL}/api/og`],
   },
   icons: {
@@ -67,17 +70,20 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "KLB Consultants",
+  name: "Tax Residency Advisors",
+  alternateName: "TRA",
   description:
-    "Tax residency planning and real estate investment consulting",
+    "Tax residency real estate planning for CA-to-NV relocations",
   url: SITE_URL,
   telephone: "+1-702-222-1964",
+  email: "info@taxresidencyadvisors.com",
   areaServed: ["California", "Nevada"],
   foundingDate: "2005-01",
   serviceType: [
-    "Tax Residency Planning",
-    "Real Estate Investment Consulting",
-    "Family Office Advisory",
+    "Tax Residency Real Estate Planning",
+    "CA-to-NV Relocation",
+    "Family Office Real Estate Consulting",
+    "Multi-State Real Estate Advisory",
   ],
 };
 

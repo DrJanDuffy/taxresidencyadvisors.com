@@ -35,7 +35,7 @@ export async function GET() {
               fontFamily: "serif",
             }}
           >
-            KLB Consultants
+            Tax Residency Advisors
           </div>
           <div
             style={{
@@ -44,7 +44,7 @@ export async function GET() {
               marginBottom: 24,
             }}
           >
-            Tax Residency Advisors
+            CA-to-NV Real Estate & Tax Residency Planning
           </div>
           <div
             style={{

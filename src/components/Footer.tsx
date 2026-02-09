@@ -5,18 +5,14 @@ export function Footer() {
     <footer className="border-t border-white/5 bg-[#0F1A2E] px-4 py-12 sm:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Column 1 — Dr. Jan Duffy */}
+          {/* Column 1 — Tax Residency Advisors */}
           <div>
             <h4 className="font-playfair text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">
-              Dr. Jan Duffy
+              Tax Residency Advisors
             </h4>
             <p className="mt-3 text-sm text-[var(--foreground)]">
-              Las Vegas Real Estate Expert
+              Dr. Jan Duffy, Nevada Market Expert
             </p>
-            <p className="text-sm text-[var(--foreground)]">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-            <p className="mt-1 text-sm text-[var(--muted)]">NV License: S.0197614.LLC</p>
             <a href="tel:+17022221964" className="mt-2 block text-sm text-[var(--foreground)] hover:text-[var(--accent)]">
               702-222-1964
             </a>
@@ -28,7 +24,20 @@ export function Footer() {
             </a>
           </div>
 
-          {/* Column 2 — Quick Links */}
+          {/* Column 2 — Our Brokerages */}
+          <div>
+            <h4 className="font-playfair text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">
+              Our Brokerages
+            </h4>
+            <p className="mt-3 text-sm text-[var(--foreground)]">
+              NV: Dr. Jan Duffy | BHHS Nevada Properties | S.0197614.LLC
+            </p>
+            <p className="mt-2 text-sm text-[var(--foreground)]">
+              CA: KLB Consultants | Kelly Lynn Boyle, Broker | Dr. Eugene Boyle, Agent
+            </p>
+          </div>
+
+          {/* Column 3 — Quick Links */}
           <div>
             <h4 className="font-playfair text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">
               Quick Links
@@ -67,7 +76,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 — Markets We Serve */}
+          {/* Column 4 — Markets We Serve + For Professionals */}
           <div>
             <h4 className="font-playfair text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">
               Markets We Serve
@@ -80,11 +89,7 @@ export function Footer() {
               <li>New Construction</li>
               <li>Skye Canyon & Centennial Hills</li>
             </ul>
-          </div>
-
-          {/* Column 4 — For Professionals */}
-          <div>
-            <h4 className="font-playfair text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">
+            <h4 className="font-playfair mt-6 text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">
               For Professionals
             </h4>
             <ul className="mt-3 space-y-2">
@@ -113,13 +118,12 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-center text-xs text-[var(--muted)] sm:flex-row">
-          <span>
-            © 2026 KLB Consultants | Dr. Jan Duffy | Berkshire Hathaway HomeServices Nevada Properties
-          </span>
-          <span className="hidden sm:inline">|</span>
-          <span>Equal Housing Opportunity</span>
-          <div className="flex gap-4">
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/5 pt-8 text-center text-xs text-[var(--muted)]">
+          <span>© 2026 Tax Residency Advisors</span>
+          <p className="max-w-2xl mx-auto leading-relaxed">
+            Nevada real estate services provided by Dr. Jan Duffy, NV License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. California real estate services provided by KLB Consultants, Kelly Lynn Boyle, CA Licensed Broker. Each brokerage is independently owned and operated. Equal Housing Opportunity.
+          </p>
+          <div className="flex justify-center gap-4">
             <Link href="/privacy" className="hover:text-[var(--accent)]">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-[var(--accent)]">Terms</Link>
           </div>

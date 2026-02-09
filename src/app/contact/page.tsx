@@ -3,11 +3,11 @@ import { SITE_URL } from "@/lib/site";
 import { ContactPageForm } from "@/components/ContactPageForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Schedule a Consultation | Dr. Jan Duffy",
+  title: "Contact",
   description:
     "Schedule a consultation with Dr. Jan Duffy. CPAs and tax professionals: refer a client. Clients relocating to Nevada: request a consultation. 702-222-1964.",
   openGraph: {
-    title: "Contact | KLB Consultants",
+    title: "Contact | Tax Residency Advisors",
     url: `${SITE_URL}/contact`,
   },
 };
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const contactJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "KLB Consultants | Dr. Jan Duffy",
+  name: "Tax Residency Advisors",
   description: "Tax residency planning and Las Vegas real estate. Berkshire Hathaway HomeServices Nevada Properties.",
   url: SITE_URL,
   telephone: "+1-702-222-1964",

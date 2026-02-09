@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Meet Dr. Jan Duffy — Ph.D., 30+ years Las Vegas market expertise, $127M+ career sales, 500+ families. The real estate expert CPAs trust for Nevada tax-residency relocations.",
   openGraph: {
-    title: "About Dr. Jan Duffy | KLB Consultants",
+    title: "About Dr. Jan Duffy | Tax Residency Advisors",
     url: `${SITE_URL}/about`,
   },
 };
