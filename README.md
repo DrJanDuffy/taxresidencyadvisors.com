@@ -34,8 +34,9 @@ Optional: configure environment variables in Vercel for future form handling (e.
 
 ## Project structure
 
-- `src/app/` — Root layout, global styles, metadata, home page
-- `src/components/` — Section components (Header, Hero, Services, Case Studies, About, Affiliations, Contact, Footer)
+- `src/app/` — App Router: layout (Navbar + Footer), home, about, for-cpas, services, services/[slug], case-studies, nevada-guide, contact, not-found
+- `src/components/` — Navbar, Footer, CTA, StatBar, TestimonialCard, ForCPAsReferralForm, ContactPageForm
+- `src/lib/` — services.ts (service data), case-studies.ts (case study data)
 - `public/` — Logo, favicon, static assets
 
 ## License

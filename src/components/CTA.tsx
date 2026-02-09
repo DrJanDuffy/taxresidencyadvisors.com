@@ -16,7 +16,7 @@ const variantClasses: Record<CTAVariant, string> = {
   primary:
     "bg-[var(--accent)] text-[#0F1A2E] hover:opacity-90 px-5 py-2.5",
   secondary:
-    "border-2 border-[#1B2A4A] text-[var(--foreground)] hover:bg-white/5 px-5 py-2.5 dark:border-[var(--accent)]",
+    "border-2 border-white/30 text-[var(--foreground)] hover:bg-white/5 px-5 py-2.5",
   ghost:
     "text-[var(--accent)] hover:text-[var(--foreground)] px-0 py-2",
 };
